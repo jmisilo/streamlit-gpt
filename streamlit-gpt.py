@@ -1,5 +1,3 @@
-import pandas as pd
-import numpy as np
 import streamlit as st
 import openai
 
@@ -50,10 +48,10 @@ key = st.sidebar.text_input('OpenAI API Key:', type='password')
 length = st.sidebar.slider('Maximum length of the answer', 32, 512, 64)
 
 if not key:
-    st.title('Pass API key to get access to form.')
+    st.header('🔑 Pass API key to get access to form.')
 
 elif key:    
-    st.title('Find out something about website!')
+    st.header('🌎 Find out something about website!')
 
     model = Model(
         api_key=key,
